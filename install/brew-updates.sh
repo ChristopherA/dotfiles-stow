@@ -69,7 +69,11 @@ fi
 
 # install all brews listed in ~/.dotfiles/install/Brewfile
 
-brew bundle
+if [ -f ~/.dotfiles/install/Brewfile ]; then
+  cd ~/.dotfiles/install/
+  brew bundle
+  cd -
+fi
 
 # Symlink any .app-style brews applications locally to ~/Applications
 
