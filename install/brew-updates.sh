@@ -81,9 +81,9 @@ if $SCRIPT_DEBUG; then echo "...Symlink any .app-style brews."; fi
 
 if $SCRIPT_DEBUG
   then
-    brew linkapps --local
+    brew linkapps
   else
-    brew linkapps --local > /dev/null
+    brew linkapps > /dev/null
 fi
 
 
