@@ -4,9 +4,6 @@
 
 # from dyvers hands
 
-# Use nano, installed from Brew, as the default editor
-export EDITOR="/usr/local/bin/nano"
-
 # Ignore duplicate commands in the history
 export HISTCONTROL=ignoredups
 
