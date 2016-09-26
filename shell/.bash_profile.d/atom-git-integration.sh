@@ -7,4 +7,5 @@
 
 if [ -d $(brew --prefix)/Caskroom/atom/ ]; then
   git config --global core.editor "atom --wait"
+  export VISUAL="/usr/local/bin/atom"
 fi

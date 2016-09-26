@@ -1,0 +1,87 @@
+# .nanorc - rc file for the nano editor
+
+# These syntax highlighting definitions come from
+# https://github.com/scopatz/nanorc
+# ?? some didn't work, commented out git.nanorc and gitcommit.rc
+
+include ~/.nanorc.d/apacheconf.nanorc
+include ~/.nanorc.d/asciidoc.nanorc
+include ~/.nanorc.d/asm.nanorc
+include ~/.nanorc.d/awk.nanorc
+include ~/.nanorc.d/c.nanorc
+include ~/.nanorc.d/cmake.nanorc
+include ~/.nanorc.d/coffeescript.nanorc
+include ~/.nanorc.d/colortest.nanorc
+include ~/.nanorc.d/conf.nanorc
+include ~/.nanorc.d/csharp.nanorc
+include ~/.nanorc.d/css.nanorc
+include ~/.nanorc.d/cython.nanorc
+include ~/.nanorc.d/dot.nanorc
+include ~/.nanorc.d/email.nanorc
+include ~/.nanorc.d/fish.nanorc
+include ~/.nanorc.d/fortran.nanorc
+include ~/.nanorc.d/gentoo.nanorc
+#include ~/.nanorc.d/git.nanorc
+#include ~/.nanorc.d/gitcommit.nanorc
+include ~/.nanorc.d/glsl.nanorc
+include ~/.nanorc.d/go.nanorc
+include ~/.nanorc.d/groff.nanorc
+include ~/.nanorc.d/haml.nanorc
+include ~/.nanorc.d/html.nanorc
+include ~/.nanorc.d/ini.nanorc
+include ~/.nanorc.d/inputrc.nanorc
+include ~/.nanorc.d/java.nanorc
+include ~/.nanorc.d/javascript.nanorc
+include ~/.nanorc.d/js.nanorc
+include ~/.nanorc.d/json.nanorc
+include ~/.nanorc.d/keymap.nanorc
+include ~/.nanorc.d/kickstart.nanorc
+include ~/.nanorc.d/ledger.nanorc
+include ~/.nanorc.d/lisp.nanorc
+include ~/.nanorc.d/lua.nanorc
+include ~/.nanorc.d/makefile.nanorc
+include ~/.nanorc.d/man.nanorc
+include ~/.nanorc.d/markdown.nanorc
+include ~/.nanorc.d/mpdconf.nanorc
+include ~/.nanorc.d/mutt.nanorc
+include ~/.nanorc.d/nanorc.nanorc
+include ~/.nanorc.d/nginx.nanorc
+include ~/.nanorc.d/patch.nanorc
+include ~/.nanorc.d/peg.nanorc
+include ~/.nanorc.d/perl.nanorc
+include ~/.nanorc.d/php.nanorc
+include ~/.nanorc.d/pkg-config.nanorc
+include ~/.nanorc.d/pkgbuild.nanorc
+include ~/.nanorc.d/po.nanorc
+include ~/.nanorc.d/pov.nanorc
+include ~/.nanorc.d/privoxy.nanorc
+include ~/.nanorc.d/python.nanorc
+include ~/.nanorc.d/reST.nanorc
+include ~/.nanorc.d/rpmspec.nanorc
+include ~/.nanorc.d/ruby.nanorc
+include ~/.nanorc.d/scala.nanorc
+include ~/.nanorc.d/sed.nanorc
+include ~/.nanorc.d/sh.nanorc
+include ~/.nanorc.d/sql.nanorc
+include ~/.nanorc.d/systemd.nanorc
+include ~/.nanorc.d/tcl.nanorc
+include ~/.nanorc.d/tex.nanorc
+include ~/.nanorc.d/vala.nanorc
+include ~/.nanorc.d/vi.nanorc
+include ~/.nanorc.d/xml.nanorc
+include ~/.nanorc.d/xresources.nanorc
+include ~/.nanorc.d/yaml.nanorc
+include ~/.nanorc.d/yum.nanorc
+include ~/.nanorc.d/zsh.nanorc
+
+# Settings
+# as per http://www.if-not-true-then-false.com/2009/tuning-nano-text-editor-with-nanorc/
+
+set mouse #set mouse
+set tabstospaces # Convert typed tabs to spaces.
+set tabsize 2 # Set width of a tab to #cols columns, must be greater than 0.
+set autoindent # Indent new lines to the previous line’s indentation.
+set smooth # Text will scroll line-by-line, instead of the usual chunk-by-chunk behavior.
+set const # Constantly show the cursor position.
+set historylog
+set backupdir "~/.backup/nano-backups"
