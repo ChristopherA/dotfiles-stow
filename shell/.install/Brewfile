@@ -1,9 +1,25 @@
 # The folowing brew recipes will be installed by ~/.dotfiles/install/brew-updates.sh
+# Update this Brewfile by `brew bundle dump --force` but these comments will be lost!
+# https://github.com/Homebrew/homebrew-bundle
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 brew 'bash-completion'
 brew 'bash-git-prompt'
+brew 'libgpg-error'
+brew 'libassuan'
+brew 'libgcrypt'
+brew 'libksba'
+brew 'pth'
+brew 'dirmngr'
+brew 'pinentry'
+brew 'gpg-agent'
+brew 'libusb'
+brew 'libusb-compat'
+brew 'readline'
+brew 'gnupg2', args: ['with-readline']
 brew 'grc'
 brew 'hub'
+brew 'stow'
 cask 'atom'
+cask 'typora'
