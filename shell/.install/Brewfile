@@ -1,0 +1,9 @@
+# The folowing brew recipes will be installed by ~/.dotfiles/install/brew-updates.sh
+tap 'caskroom/cask'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+brew 'bash-completion'
+brew 'bash-git-prompt'
+brew 'grc'
+brew 'hub'
+cask 'atom'
