@@ -6,13 +6,11 @@ This is a work in progress — use with caution.
 
 ## Installation
 
-You'll need to have brew and git installed, 
-
 ~~~
 cd ~/
+curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/install/allosxupdates.sh | bash
+# $ curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/install/brew-updates.sh | bash
 git clone https://github.com/ChristopherA/dotfiles-stow.git .dotfiles
-cd ~/.dotfiles/shell/.install/
-brew bundle
 cd ~/.dotfiles
 stow shell
 ~~~
