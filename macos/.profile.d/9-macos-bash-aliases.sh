@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.profile.d/osx-bash-aliases.sh: useful aliases for both interactive and
+# ~/.profile.d/macos-bash-aliases.sh: useful aliases for both interactive and
 # non-interactive bash on a mac.
 
 # from dyvers hands

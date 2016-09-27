@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.bash_profile.d/osx-functions.sh: useful osx specific functions for interactive bash
+# ~/.bash_profile.d/macos-functions.sh: useful osx specific functions for interactive bash
 
 #find and list processes matching a case-insensitive partial-match string
 ## as per http://brettterpstra.com/2014/08/15/shell-tricks-a-time-to-kill/

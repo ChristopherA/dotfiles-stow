@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.profile.d/9-bash-exports.sh: useful exports for both interactive and
+# ~/.profile.d/9-macos-bash-exports.sh: useful exports for both interactive and
 # non-interactive bash
 
 # from dyvers hands
