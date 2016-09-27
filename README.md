@@ -15,5 +15,6 @@ git clone https://github.com/ChristopherA/dotfiles-stow.git .dotfiles
 brew bundle
 cd ~/.dotfiles
 stow shell
+stow osx
+stow nano # optional
 ~~~
-
