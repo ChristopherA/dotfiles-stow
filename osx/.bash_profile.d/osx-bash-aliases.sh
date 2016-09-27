@@ -31,6 +31,9 @@ cdf() {
 
 alias f='open -a Finder ./'
 
+# From http://apple.stackexchange.com/questions/110343/copy-last-command-in-terminal
+alias copyLastCmd='fc -ln -1 | awk '\''{$1=$1}1'\'' ORS='\'''\'' | pbcopy'
+
 # Trim new lines and copy to clipboard
 alias clip="tr -d '\n' | pbcopy"
 
