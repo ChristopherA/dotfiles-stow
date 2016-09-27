@@ -42,3 +42,14 @@ alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resou
 
 # Open simulator
 alias ios="open #/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Develope#r/Applications/iPhone\ Simulator.app"
+
+# Use Finder's Quick Look on a file (^C or space to close)
+alias ql='qlmanage -p 2>/dev/null'
+
+# Mute/Unmute the system volume. Plays nice with all other volume settings.
+alias mute="osascript -e 'set volume output muted true'"
+alias unmute="osascript -e 'set volume output muted false'"
+
+# Pin to the tail of long commands for an audible alert after long processes
+## curl http://downloads.com/hugefile.zip; lmk
+alias lmk="say 'Process complete.'"
