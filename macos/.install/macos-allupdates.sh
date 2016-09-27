@@ -6,7 +6,7 @@
 
 # Execute on a new machine via:
 
-# $ curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/osx/.install/allosxupdates.sh | bash
+# $ curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/macos/.install/macos-allupdates.sh | bash
 
 # TBD: It is possible that after command line utilities are installed that
 # additional updates may be required, even though previous test resulted in
