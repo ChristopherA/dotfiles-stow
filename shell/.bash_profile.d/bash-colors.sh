@@ -3,9 +3,17 @@
 # ~/.bash_profile.d/bash-colors.sh: colors for bash
 # from dyvers hands
 
-# Define Mac bash command line colors, compatible with Solarized color
-# themes from http://ethanschoonover.com/solarized
-export CLICOLOR=1
+if [ $(uname) = "Linux" ]
+then
+  alias ls="ls --color=auto"
+fi
+
+if [ $(uname) = "Darwin" ]
+then
+  # Define Mac bash command line colors, compatible with Solarized color
+  # themes from http://ethanschoonover.com/solarized
+  export CLICOLOR=1
+fi
 
 ### Solarized-dark 'ls' colors if we are using Mac OSX `ls`
 ### as per https://github.com/seebi/dircolors-solarized/issues/10
