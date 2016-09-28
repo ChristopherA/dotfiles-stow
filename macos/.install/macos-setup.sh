@@ -34,8 +34,8 @@ if $SCRIPT_DEBUG; then echo "~/.install/macos-setup.sh sourced."; fi
 
 if $SCRIPT_DEBUG; then echo "   ~/.install/macos-setup.d sourced."; fi
 
-if [ -d ~/.install/macos-setup.d ]; then
-  for file in ~/.install/macos-setup.d; do
+if [ -d ~/.install/macos-setup.d/ ]; then
+  for file in ~/.install/macos-setup.d/*.sh ; do
     source $file
     if $SCRIPT_DEBUG; then echo "         ${file##*/} completed."; fi
   done
