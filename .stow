@@ -1,0 +1,11 @@
+# tells gnu 'stow' that this directory is a stow directory in case of conflicts
+#
+# the contents of this directory are ignored, it is the existence of the file
+#
+# From 'info stow' section '9 Multiple Stow Directories':
+#
+# > When multiple stow directories share a target tree, if a tree-folding
+# > symlink is encountered and needs to be split open during an
+# > installation, as long as the top-level stow directory into which the
+# > existing symlink points contains `.stow', Stow knows how to split open
+# > the tree in the correct manner.
