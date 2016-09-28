@@ -57,7 +57,7 @@ source ~/.install/macos-setup.sh
 # Uninstall
 
 ```
-stow -D shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest
+cd ~/.dotfiles ; stow -Dv shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest ; cd -
 ```
 
 # After Changes
@@ -65,6 +65,6 @@ stow -D shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos
 If you add or delete files in your .dotfiles stows, you can update them with (same as `-D` followed by `-S`): 
 
 ```
-stow -R shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest
+cd ~/.dotfiles ; stow -R shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest ; cd -
 ```
 
