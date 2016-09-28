@@ -9,6 +9,11 @@
 
 # Refactored to use conf.d style loading.
 
+# Script Debugger
+
+#SCRIPT_DEBUG=true
+#SCRIPT_DEBUG=false
+
 # macos-only stuff. Abort if not macos.
 if [ "$(uname -s)" != "Darwin" ]
 then
@@ -22,10 +27,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Script Debugger
-
-#SCRIPT_DEBUG=true
-#SCRIPT_DEBUG=false
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
 
 if $SCRIPT_DEBUG; then echo "~/.install/macos-setup.sh sourced."; fi
 

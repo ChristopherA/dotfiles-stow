@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# ~/.dotfiles/macos-harden/.install/macos-setup.d/6-time.sh
-# ~/.install/macos-setup.d/6-time.sh after `stow macos-harden`
+# ~/.dotfiles/macos-harden/.install/macos-setup.d/5-software-updates.sh
+# ~/.install/macos-setup.d/5-software-updates.sh after `stow macos-harden`
 
 # sourced by ~/.install/macos-setup.sh after `stow macos`
 
