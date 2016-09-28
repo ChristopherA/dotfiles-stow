@@ -3,7 +3,7 @@
 # ~/.dotfiles/osx/.install/brew-updates.sh -- update brew, install it if necessary
 # http://brew.sh, search for brew formulae at http://braumeister.org
 
-# 2016-09-21 Confirmed working with macOS Sierra 10.12.0
+# 2016-09-27 Confirmed working with macOS Sierra 10.12.0
 
 # Can be executed remotely on a new machine via:
 
@@ -17,11 +17,20 @@
 # kill on error
 set -e
 
+clrstandout=$(tput smso) # Inverse - marks beginning end of this script
+clrcommand=$(tput bold) # bold - marks calling other functions or scripts
+clrunder=$(tput smul) # underline - marks comments
+clrwarning=$(tput setaf 3) # yellow - marks warnings
+clrerror=$(tput setaf 1) # red - marks errors
+clrreset=$(tput sgr0) #normal - resets all
+
 brew_updates() {
+
+if $SCRIPT_DEBUG; then echo "${clrstandout}brew-updates.sh sourced.${clrreset}"; fi
 
 # Check for Homebrew. Install Homebrew http://brew.sh if doesn't exist, force via curl if necessary
 if test ! $(which brew); then
-  if $SCRIPT_DEBUG; then echo "...Installing Homebrew."; fi
+  if $SCRIPT_DEBUG; then echo "${clrcommand}Installing Homebrew.${clrreset}"; fi
 
   if $SCRIPT_DEBUG
     then
@@ -32,7 +41,7 @@ if test ! $(which brew); then
 
   # Check Homebrew installation
 
-  if $SCRIPT_DEBUG; then echo "...Checking installation."; fi
+  if $SCRIPT_DEBUG; then echo "${clrcomment}Checking installation.${clrreset}"; fi
 
   if $SCRIPT_DEBUG
     then
@@ -41,13 +50,13 @@ if test ! $(which brew); then
       brew doctor > /dev/null
   fi
 
-  if $SCRIPT_DEBUG; then echo "...Homebrew installed."; fi
+  if $SCRIPT_DEBUG; then echo "${clrcommand}Homebrew installed.${clrreset}"; fi
 
 fi
 
 # Update the latest version of Homebrew
 
-if $SCRIPT_DEBUG; then echo "...Updating Homebrew."; fi
+if $SCRIPT_DEBUG; then echo "${clrcommand}Updating Homebrew.${clrreset}"; fi
 
 if $SCRIPT_DEBUG
   then
@@ -58,7 +67,7 @@ fi
 
 # Upgrade any outdated, unpinned brews
 
-if $SCRIPT_DEBUG; then echo "...Upgrade any outdated, unpinned brews."; fi
+if $SCRIPT_DEBUG; then echo "${clrcommand}Upgrade any outdated, unpinned brews.${clrreset}"; fi
 
 if $SCRIPT_DEBUG
   then
@@ -69,15 +78,39 @@ fi
 
 # install all brews listed in ~/.dotfiles/install/Brewfile
 
-if [ -f ~/.install/Brewfile ]; then
-  cd ~/.install/
-  brew bundle
-  cd -
+if [ -f ~/.install/Brewfile ];
+then
+  if $SCRIPT_DEBUG
+  then
+    echo "${clrcomment}Brewfile for \`brew bundle\` found in ~/.install/Brewfile.${clrreset}"
+    cd ~/.install
+    brew bundle
+    cd - > /dev/null
+  else
+    cd ~/.install
+    brew bundle > /dev/null
+    cd - > /dev/null
+  fi
+elif [ -f ~/.dotfiles/osx/.install/Brewfile ]
+then
+  if $SCRIPT_DEBUG
+  then
+    echo "${clrcomment}Brewfile for \`brew bundle\` found in ~/.dotfiles/osx/.install/Brewfile.${clrreset}"
+    cd ~/.dotfiles/osx/.install/Brewfile
+    brew bundle
+    cd - > /dev/null
+  else
+    cd ~/.dotfiles/osx/.install/Brewfile
+    brew bundle > /dev/null
+    cd - > /dev/null
+  fi
+else
+  if $SCRIPT_DEBUG; then echo "${clrerror}No Brewfile for \`brew bundle\` found.${clrreset}"; fi
 fi
 
 # Symlink any .app-style brews applications locally to ~/Applications
 
-if $SCRIPT_DEBUG; then echo "...Symlink any .app-style brews."; fi
+if $SCRIPT_DEBUG; then echo "${clrcommand}Symlink any .app-style brews.${clrreset}"; fi
 
 if $SCRIPT_DEBUG
   then
@@ -89,7 +122,7 @@ fi
 
 # Cleanup old Homebrew formula
 
-if $SCRIPT_DEBUG; then echo "...Cleanup old brew formula."; fi
+if $SCRIPT_DEBUG; then echo "${clrcommand}Cleanup old brew formula.${clrreset}"; fi
 
 if $SCRIPT_DEBUG
   then
@@ -100,7 +133,7 @@ fi
 
 # Prune dead Homebrew symlinks
 
-if $SCRIPT_DEBUG; then echo "...Prune dead symlinks."; fi
+if $SCRIPT_DEBUG; then echo "${clrcommand}Prune dead symlinks.${clrreset}"; fi
 
 if $SCRIPT_DEBUG
   then
@@ -109,7 +142,7 @@ if $SCRIPT_DEBUG
     brew prune > /dev/null
 fi
 
-if $SCRIPT_DEBUG; then echo "...Homebrew updated."; fi
+if $SCRIPT_DEBUG; then echo "${clrstandout}brew-updates.sh completed.${clrreset}"; fi
 
 
 } # end function brew_updates()
