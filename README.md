@@ -37,6 +37,7 @@ cd ~/.dotfiles
 stow shell # Minimum set of shell configuration
 stow shell-git # Adds git & gpg commit integration to shell
 stow shell-git-hub # Adds github-specific `brew install hub`
+stow shell-git-bash-git-prompt # Adds `brew install bash-git-prompt` prompt and colors
 stow shell-nano # optionally install nano editor (on mac allows use of mouse in Terminal)
 stow macos # optionally install some additional macOS Sierra specific scripts
 stow macos-git-atom # optionally use atom for git commit
