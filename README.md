@@ -1,6 +1,6 @@
 # Dotfiles, managed by Stow
 
-This project is a refactor of my old dotfiles, updated for macOS Sierra 10.12.0, using gnu `stow` and a `conf.d`like approach to `.bash_profile`, `.profile` and similar files.
+This project is a refactor of my old dotfiles, updated for macOS Sierra 10.12.0, using gnu `stow` and a `conf.d` like approach to `.bash_profile`, `.profile` and similar files.
 
 * 2016-09-27 - Confirmed working with macOS Sierra 10.12.0
 
@@ -36,13 +36,17 @@ cd ~/.dotfiles
 ~~~
 stow shell # Minimum set of shell configuration
 stow shell-git # Adds git & gpg commit integration to shell
-stow shell-git-hub # Adds github-specific `brew install hub`
-stow shell-git-bash-git-prompt # Adds `brew install bash-git-prompt` prompt and colors
+stow shell-git-hub # Adds github-specific 'brew install hub'
+stow shell-git-bash-git-prompt # Adds 'brew install bash-git-prompt' prompt and colors
 stow shell-nano # optionally install nano editor (on mac allows use of mouse in Terminal)
 stow macos # optionally install some additional macOS Sierra specific scripts
 stow macos-git-atom # optionally use atom for git commit
 stow macos-harden # optionally install any macOS Sierra hardening scripts
-stow macos-hardest # even more paranoid macOS Sierra hardening scripts (requires `stow-harden` first)
+stow macos-hardest # even more paranoid macOS Sierra hardening scripts (requires 'stow-harden' first)
+~~~
+* [ ] Or you can install them all at once with:
+~~~
+stow -S shell shell-git shell-git-hub shell-git-bash-git-prompt stow shell-nano stow macos macos-git-atom macos-harden macos-hardest
 ~~~
 * [ ] If you have done `stow macos-*` you can optionally setup macOS with various useful additional settings
 ~~~
@@ -51,3 +55,7 @@ source ~/.install/macos-setup.sh
 - [ ] Close and reopen your Terminal
 
 # Uninstall
+
+~~~
+stow -D shell shell-git shell-git-hub shell-git-bash-git-prompt stow shell-nano stow macos macos-git-atom macos-harden macos-hardest
+~~~
