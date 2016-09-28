@@ -8,25 +8,22 @@
 # From Christopher Allen's https://github.com/christophera/dotfiles-stow/
 
 ###############################################################################
-# Hardest settings for Time Machine
+# Hardest settings for Software Updates
 ###############################################################################
 
 # 2016-09-27 Confirmed working with macOS Sierra 10.12.0 - CA
 
-# ----------------------------------
-# Disable local Time Machine backups
-# ----------------------------------
+# -------------------------------------------
+# Misc. Software Update Settings from Mathias
+# -------------------------------------------
 
 # Originally from Mathias Bynens' famous dotfiles
 # at https://mths.be/osx or https://github.com/mathiasbynens/dotfiles
 # found in https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
-# TODO: How do we reverse this?
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+# Turn off app auto-update
+defaults write com.apple.commerce AutoUpdate -bool false
 
-# TODO: It is possible that any cached local Time Machine backups need to
-# be manually deleted. I believe it may be cleared by…
-sudo periodic daily weekly monthly
-
-# Reboot not required
-#if ! $REBOOT_REQUIRED; then export $REBOOT_REQUIRED=true; fi
+# It is likely that these require a reboot before they are effective.
+# TODO: test if this works without reboot.
+if ! $REBOOT_REQUIRED; then export $REBOOT_REQUIRED=true; fi
