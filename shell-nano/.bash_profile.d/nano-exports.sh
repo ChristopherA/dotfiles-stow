@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.bash_profile.d/nano-exports.sh: Use Nano as the editor
+# ~/.bash_profile.d/5-nano-git.sh: Use Nano as the git commit editor
 
 # If nano is installed (`brew tap homebrew/dupes` & `brew install cask nano`)
 

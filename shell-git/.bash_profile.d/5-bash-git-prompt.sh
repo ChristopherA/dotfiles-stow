@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.bash_profile.d/bash-git-prompt.sh: An informative and fancy bash prompt for Git users
+# ~/.bash_profile.d/5-bash-git-prompt.sh: An informative and fancy bash prompt for Git users
 # from https://github.com/magicmonty/bash-git-prompt
 
 # If bash-git-prompt is installed (`brew install bash-git-prompt`)

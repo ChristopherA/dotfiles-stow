@@ -32,11 +32,13 @@ git clone https://github.com/ChristopherA/dotfiles-stow.git ~/.dotfiles
 ~~~
 cd ~/.dotfiles
 ~~~
-* [ ] Use stow to symlink
+* [ ] Use stow to symlink (at minimum do `stow shell`)
 ~~~
-stow shell # You must minimally do this
-stow nano # optionally install nano editor (on mac allows use of mouse in terminal)
+stow shell # Minimum set of shell configuration
+stow shell-git # Adds git & gpg commit integration to shell
+stow shell-nano # optionally install nano editor (on mac allows use of mouse in Terminal)
 stow macos # optionally install some additional macOS Sierra specific scripts
+stow macos-git-atom # optionally use atom for git commit
 stow macos-harden # optionally install any macOS Sierra hardening scripts
 stow macos-hardest # even more paranoid macOS Sierra hardening scripts (requires `stow-harden` first)
 ~~~
@@ -45,3 +47,5 @@ stow macos-hardest # even more paranoid macOS Sierra hardening scripts (requires
 source ~/.install/macos-setup.sh
 ~~~
 - [ ] Close and reopen your Terminal
+
+# Uninstall

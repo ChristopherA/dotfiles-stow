@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.profile.d/bash-aliases.sh: useful aliases for both interactive and
+# ~/.profile.d/5-bash-aliases.sh: useful aliases for both interactive and
 # non-interactive bash
 
 # from dyvers hands

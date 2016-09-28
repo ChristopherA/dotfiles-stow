@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.profile.d/0-bash-functions.sh: Various path related functions for both
+# ~/.profile.d/5-bash-functions.sh: Various path related functions for both
 # interactive and non-interactive bash
 
 # from dyvers hands

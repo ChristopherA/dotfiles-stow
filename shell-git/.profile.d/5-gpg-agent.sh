@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.profile.d/9-gpg-agent.sh: Starts up gpg-agent, sets
+# ~/.profile.d/5-gpg-agent.sh: Starts up gpg-agent, sets
 # environmental variable so that multiple copies are not started
 
 if [ -f $(brew --prefix)/bin/gpg-agent ]; then

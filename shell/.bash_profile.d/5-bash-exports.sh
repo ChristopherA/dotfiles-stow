@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.bash_profile.d/bash-exports.sh: useful exports for interactive bash
+# ~/.bash_profile.d/5-bash-exports.sh: useful exports for interactive bash
 
 # from dyvers hands
 

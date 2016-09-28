@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.bash_profile.d/bash-options.sh: useful options for interactive bash
+# ~/.bash_profile.d/5-bash-options.sh: useful options for interactive bash
 
 # from dyvers hands
 

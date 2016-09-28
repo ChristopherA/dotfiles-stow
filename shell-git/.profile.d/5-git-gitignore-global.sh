@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.profile.d/9-git-gitignore_global.sh: Various path related functions
+# ~/.profile.d/5-git-gitignore_global.sh: Various path related functions
 
 # Set global gitignore
 

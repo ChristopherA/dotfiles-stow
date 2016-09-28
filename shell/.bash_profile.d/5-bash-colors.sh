@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.bash_profile.d/bash-colors.sh: colors for bash
+# ~/.bash_profile.d/5-bash-colors.sh: colors for bash
 # from dyvers hands
 
 if [ $(uname) = "Linux" ]
