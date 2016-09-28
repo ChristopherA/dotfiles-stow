@@ -46,7 +46,7 @@ stow macos-hardest # even more paranoid macOS Sierra hardening scripts (requires
 ~~~
 * [ ] Or you can install them all at once with:
 ~~~
-stow -S shell shell-git shell-git-hub shell-git-bash-git-prompt stow shell-nano stow macos macos-git-atom macos-harden macos-hardest
+stow -S shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest
 ~~~
 * [ ] If you have done `stow macos-*` you can optionally setup macOS with various useful additional settings
 ~~~
@@ -56,6 +56,15 @@ source ~/.install/macos-setup.sh
 
 # Uninstall
 
-~~~
-stow -D shell shell-git shell-git-hub shell-git-bash-git-prompt stow shell-nano stow macos macos-git-atom macos-harden macos-hardest
-~~~
+```
+stow -D shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest
+```
+
+# After Changes
+
+If you add or delete files in your .dotfiles stows, you can update them with (same as `-D` followed by `-S`): 
+
+```
+stow -R shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest
+```
+
