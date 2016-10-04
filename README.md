@@ -26,7 +26,7 @@ git clone https://github.com/ChristopherA/dotfiles-stow.git ~/.dotfiles
 ~~~
 * [ ] run local version of brew updater to install Brewfile bundle
 ~~~
-~/.dotfiles/osx/.install/brew-updates.sh
+~/.dotfiles/5-macos/.install/brew-updates.sh
 ~~~
 * [ ] enter to your new .dotfiles directory
 ~~~

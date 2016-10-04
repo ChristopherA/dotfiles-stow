@@ -91,16 +91,16 @@ then
     brew bundle > /dev/null
     cd - > /dev/null
   fi
-elif [ -f ~/.dotfiles/osx/.install/Brewfile ]
+elif [ -f ~/.dotfiles/5-macos/.install/Brewfile ]
 then
   if $SCRIPT_DEBUG
   then
-    echo "${clrcomment}Brewfile for \`brew bundle\` found in ~/.dotfiles/osx/.install/Brewfile.${clrreset}"
-    cd ~/.dotfiles/osx/.install/Brewfile
+    echo "${clrcomment}Brewfile for \`brew bundle\` found in ~/.dotfiles/5-macos/.install/Brewfile.${clrreset}"
+    cd ~/.dotfiles/5-macos/.install/
     brew bundle
     cd - > /dev/null
   else
-    cd ~/.dotfiles/osx/.install/Brewfile
+    cd ~/.dotfiles/5-macos/.install/
     brew bundle > /dev/null
     cd - > /dev/null
   fi
