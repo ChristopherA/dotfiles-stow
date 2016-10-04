@@ -14,11 +14,11 @@ cd ~/
 ~~~
 * [ ] run remote script to update to latest mac os update and command line tools
 ~~~
-curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/macos/.install/macos-allupdates.sh | bash
+curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/5-macos/.install/macos-allupdates.sh | bash
 ~~~
 * [ ] run remote script to install brew and update it
 ~~~
-curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/macos/.install/brew-updates.sh | bash
+curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/5-macos/.install/brew-updates.sh | bash
 ~~~
 * [ ] clone the git repository to ~/.dotfiles
 ~~~
@@ -32,21 +32,21 @@ git clone https://github.com/ChristopherA/dotfiles-stow.git ~/.dotfiles
 ~~~
 cd ~/.dotfiles
 ~~~
-* [ ] Use stow to symlink (at minimum do `stow shell`)
+* [ ] Use stow to symlink (at minimum do `stow 0-shell`)
 ~~~
-stow shell # Minimum set of shell configuration
-stow shell-git # Adds git & gpg commit integration to shell
-stow shell-git-hub # Adds github-specific 'brew install hub'
-stow shell-git-bash-git-prompt # Adds 'brew install bash-git-prompt' prompt and colors
-stow shell-nano # optionally install nano editor (on mac allows use of mouse in Terminal)
-stow macos # optionally install some additional macOS Sierra specific scripts
-stow macos-git-atom # optionally use atom for git commit
-stow macos-harden # optionally install any macOS Sierra hardening scripts
-stow macos-hardest # even more paranoid macOS Sierra hardening scripts (requires 'stow-harden' first)
+stow 0-shell # Minimum set of shell configuration
+stow 1-shell-git # Adds git & gpg commit integration to shell
+stow 2-shell-git-bash-git-prompt # Adds 'brew install bash-git-prompt' prompt and colors
+stow 2-shell-git-hub # Adds github-specific 'brew install hub'
+stow 2-shell-nano # optionally install nano editor (on mac allows use of mouse in Terminal)
+stow 5-macos # optionally install some additional macOS Sierra specific scripts
+stow 5-macos-harden # optionally install any macOS Sierra hardening scripts
+stow 6-macos-git-atom # optionally use atom for git commit
+stow 6-macos-hardest # even more paranoid macOS Sierra hardening scripts (requires 'stow-harden' first)
 ~~~
 * [ ] Or you can install them all at once with:
 ~~~
-stow -S shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest
+./stowall
 ~~~
 * [ ] If you have done `stow macos-*` you can optionally setup macOS with various useful additional settings
 ~~~
@@ -57,14 +57,13 @@ source ~/.install/macos-setup.sh
 # Uninstall
 
 ```
-cd ~/.dotfiles ; stow -Dv shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest ; cd -
+cd ~/.dotfiles ; stow -Dv 0-shell 1-shell-git 2-shell-git-bash-git-prompt 2-shell-git-hub 2-shell-nano 5-macos 5-macos-harden 6-macos-git-atom 6-macos-hardest ; cd -
 ```
 
 # After Changes
 
-If you add or delete files in your .dotfiles stows, you can update them with (same as `-D` followed by `-S`): 
+If you add or delete files in your .dotfiles stows, you can update them with (same as `-D` followed by `-S`):
 
 ```
-cd ~/.dotfiles ; stow -R shell shell-git shell-git-hub shell-git-bash-git-prompt shell-nano macos macos-git-atom macos-harden macos-hardest ; cd -
+cd ~/.dotfiles ; stow -R 0-shell 1-shell-git 2-shell-git-bash-git-prompt 2-shell-git-hub 2-shell-nano 5-macos 5-macos-harden 6-macos-git-atom 6-macos-hardest ; cd -
 ```
-
