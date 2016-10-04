@@ -1,0 +1,9 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#PGP Keyrings
+pubring.*
+secring.*
+random_seed
+trustdb.*
