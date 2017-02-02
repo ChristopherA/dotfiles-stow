@@ -22,7 +22,7 @@ curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/5-ma
 ~~~
 * [ ] clone the git repository to ~/.dotfiles
 ~~~
-git clone https://github.com/ChristopherA/dotfiles-stow.git ~/.dotfiles
+git clone git@github.com:ChristopherA/dotfiles-stow.git ~/.dotfiles
 ~~~
 * [ ] run local version of brew updater to install Brewfile bundle
 ~~~
