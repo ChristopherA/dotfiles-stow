@@ -3,7 +3,8 @@
 *.DS_Store
 
 #PGP Keyrings
-pubring.*
 secring.*
+pubring.*
 random_seed
 trustdb.*
+RevCerts
