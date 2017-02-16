@@ -9,7 +9,7 @@ netblk=$(<getblockcount)
 echo "Current Block: $netblk"
 
 #get current block from local bitcoin-cli
-~/.bin/bitcoin-cli getblockcount > locblock
+~/.bin/bitcoin-cli -testnet getblockcount > locblock
 nodeblk=$(<locblock)
 echo "Local Block: $nodeblk"
 
