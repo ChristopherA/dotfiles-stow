@@ -3,11 +3,12 @@
 # ~/.dotfiles/osx/.install/brew-updates.sh -- update brew, install it if necessary
 # http://brew.sh, search for brew formulae at http://braumeister.org
 
+# 2017-11-13 Confirmed working with macOS Sierra 10.13.1
 # 2016-09-27 Confirmed working with macOS Sierra 10.12.0
 
 # Can be executed remotely on a new machine via:
 
-# $ curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/macos/.install/brew-updates.sh | bash
+# $ curl -L https://raw.githubusercontent.com/ChristopherA/dotfiles-stow/master/5-macos/.install/brew-updates.sh | bash
 
 # Script Debugger
 
