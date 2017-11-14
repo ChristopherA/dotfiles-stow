@@ -108,18 +108,6 @@ else
   if $SCRIPT_DEBUG; then echo "${clrerror}No Brewfile for \`brew bundle\` found.${clrreset}"; fi
 fi
 
-# Symlink any .app-style brews applications locally to ~/Applications
-
-if $SCRIPT_DEBUG; then echo "${clrcommand}Symlink any .app-style brews.${clrreset}"; fi
-
-if $SCRIPT_DEBUG
-  then
-    brew linkapps
-  else
-    brew linkapps > /dev/null
-fi
-
-
 # Cleanup old Homebrew formula
 
 if $SCRIPT_DEBUG; then echo "${clrcommand}Cleanup old brew formula.${clrreset}"; fi
